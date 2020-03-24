@@ -26,8 +26,9 @@ listaAfter = listaCognomi.sort()
 // identifico la posizione del cognome all'interno della lista
 posizioneCognome= (listaCognomi.indexOf(cognome)) + 1;
 // stampo a video la lista dei cognomi e la posizione di quello precedentemente immesso
+document.getElementById('lista-cognomi').innerHTML = 'La lista delle persone è: ' + listaAfter + '. ' + 'Sei il numero ' + posizioneCognome + ' in lista.';
+
 
 for (var i = 0; i < listaAfter.length; i++) {
   document.getElementById('lista').innerHTML += '<li>'+ listaAfter[i] +'</li>'
-  document.getElementById('posizione').innerHTML = 'Sei il numero ' + posizioneCognome + ' in lista.';
 }
