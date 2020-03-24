@@ -15,19 +15,21 @@ var listaCognomi, cognome, listaAfter, posizioneCognome;
 // creo lista cognomi
 listaCognomi = ['Rossi', 'Nerone', 'Franchi', 'De Luca', 'Airola', 'Zara'];
 
-listaCognomi.join('');
-
 // chiedo all'user di inserire un cognome
 cognome = prompt('Scrivi il tuo cognome');
+
 // aggiungo il cognome fornito alla lista di cognomi
 listaCognomi.push(cognome);
+
 // dispongo in ordine alfabetico gli elementi
 listaAfter = listaCognomi.sort()
-// identifico la posizione del cognome all'interno della lista
-posizioneCognome= (listaCognomi.indexOf(cognome)) + 1;
-// stampo a video la lista dei cognomi e la posizione di quello precedentemente immesso
 
+// identifico e assegno la posizione del cognome all'interno della lista
+posizioneCognome = (listaCognomi.indexOf(cognome)) + 1;
+
+// stampo a video la lista dei cognomi
 for (var i = 0; i < listaAfter.length; i++) {
   document.getElementById('lista').innerHTML += '<li>'+ listaAfter[i] +'</li>'
-  document.getElementById('posizione').innerHTML = 'Sei il numero ' + posizioneCognome + ' in lista.';
 }
+// stampo la posizione del cognome precedentemente immesso
+document.getElementById('posizione').innerHTML = 'Sei il numero ' + posizioneCognome + ' in lista.';
