@@ -22,14 +22,14 @@ cognome = prompt('Scrivi il tuo cognome');
 listaCognomi.push(cognome);
 
 // dispongo in ordine alfabetico gli elementi
-listaAfter = listaCognomi.sort()
+listaAfter = listaCognomi.sort();
 
 // identifico e assegno la posizione del cognome all'interno della lista
 posizioneCognome = (listaCognomi.indexOf(cognome)) + 1;
 
 // stampo a video la lista dei cognomi
 for (var i = 0; i < listaAfter.length; i++) {
-  document.getElementById('lista').innerHTML += '<li>'+ listaAfter[i] +'</li>'
+  document.getElementById('lista').innerHTML += '<li>'+ listaAfter[i] +'</li>';
 }
 // stampo la posizione del cognome precedentemente immesso
 document.getElementById('posizione').innerHTML = 'Sei il numero ' + posizioneCognome + ' in lista.';

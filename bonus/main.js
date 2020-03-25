@@ -14,21 +14,20 @@ var listaCognomi, cognome, listaAfter, posizioneCognome;
 
 // creo lista cognomi
 listaCognomi = ['Rossi', 'Nerone', 'Franchi', 'De Luca', 'Airola', 'Zara'];
-
-listaCognomi.join('');
+listaCopia = listaCognomi.slice()
 
 // chiedo all'user di inserire un cognome
 cognome = prompt('Scrivi il tuo cognome');
 // aggiungo il cognome fornito alla lista di cognomi
 listaCognomi.push(cognome);
+listaCopia.push(cognome);
 // dispongo in ordine alfabetico gli elementi
-listaAfter = listaCognomi.sort()
+listaCognomi.sort();
+// listaAfter = listaCognomi.sort()
 // identifico la posizione del cognome all'interno della lista
 posizioneCognome= (listaCognomi.indexOf(cognome)) + 1;
 // stampo a video la lista dei cognomi e la posizione di quello precedentemente immesso
-document.getElementById('lista-cognomi').innerHTML = 'La lista delle persone è: ' + listaAfter + '. ' + 'Sei il numero ' + posizioneCognome + ' in lista.';
-
-
-for (var i = 0; i < listaAfter.length; i++) {
-  document.getElementById('lista').innerHTML += '<li>'+ listaAfter[i] +'</li>'
+for (var i = 0; i < listaCognomi.length; i++) {
+  document.getElementById('ordered').innerHTML += '<li>'+ listaCognomi.sort()[i] +'</li>'
+  document.getElementById('unordered').innerHTML += '<li>'+ listaCopia[i] +'</li>'
 }
